@@ -1,0 +1,38 @@
+﻿@model Prosjektoppgave.Models.Order
+@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Scripts/jquery-ui.min.css" rel="stylesheet" />
+    <title>Bestilling av flybilletter</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#from").autocomplete({
+                source: '@Url.Action("GetOrigin")'
+            });
+        })
+        $(function () {
+            $("#to").autocomplete({
+                source: '@Url.Action("GetDestination")'
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <form id="form1" runat="server">
+            <div>
+                <table>
+                    <tr><td>Fra: </td><td><input type="text" id="from" name="from" /></td><td>Til: </td><td><input type="text" id="to" name="to" /></td></tr>
+                </table>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
