@@ -16,5 +16,8 @@ namespace Prosjektoppgave.Models
 
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Route> Routes { get; set; }
-    }
+        public virtual DbSet<Schedule> Schedules { get; set; }
+        public virtual DbSet<Ticket> Tickets { get; set; }
+        public virtual DbSet<Passenger> Passengers { get; set; }
+    } 
 }
