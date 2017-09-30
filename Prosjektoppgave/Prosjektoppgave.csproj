@@ -173,6 +173,7 @@
     <Compile Include="Models\DBInit.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Route.cs" />
+    <Compile Include="Models\Schedule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
